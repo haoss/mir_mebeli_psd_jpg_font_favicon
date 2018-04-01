@@ -13,11 +13,46 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .offers
+    &__block
+      height: 233px
+  .main-slider
+    padding: 0 15px
+    &__block
+      height: 265px
+      &-content
+        bottom: 34px
+        padding-left: 35px
+        font-size: rem(14)
+      &-number
+        display: none
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .offers
+    &__block
+      height: 210px
+      margin-bottom: 30px
+  .news
+    &__block
+      margin-bottom: 30px
+  .about
+    &__content
+      padding-left: 25px
+  .main-slider
+    &__block
+      height: 205px
+      &-content
+        display: none
+
+@media only screen and (max-width : 991px) and (min-width : 767px)
+  .advantages
+    &__block
+      padding-left: 0
+      text-align: center
+      &-img
+        position: relative
+        margin: 0 auto 10px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -26,10 +61,46 @@
     transition-property: none !important
     transform: none !important
     animation: none !important
+  .section
+    &__head
+      &--767wrap
+        div
+          padding-left: 10px
+          padding-right: 10px
+          white-space: normal
+  .text
+    &--767block
+      display: block
+  .advantages
+    padding-bottom: 10px !important
+    &__block
+      max-width: 350px
+      margin: 0 auto 20px
+      &-img
+        text-align: left
+  .main-slider
+    &__block
+      height: 127px
+    .slick-dots
+      display: none !important
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .section
+    padding: 55px 0
+    &__head
+      div
+        padding-left: 10px
+        padding-right: 10px
+        white-space: normal
+  .offers
+    padding-top: 25px
+    padding-bottom: 30px
+  .advantages
+    padding-top: 40px
+  .main-slider
+    &__block
+      height: 82px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

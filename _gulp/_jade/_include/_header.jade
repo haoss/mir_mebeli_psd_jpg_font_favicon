@@ -2,14 +2,53 @@
 header.header
   .container
     
-    -var navigation = { 'Главная': '#', 'О нас': '#', 'Продукция': '#', 'Сотрудничество': '#', 'Наши магазины': '#', 'Контакты': '#'};
+    -var navigation = { 'Главная': '#!', 'Магазины': '#!', 'Бренды': '#!', 'Аренда': '#!', 'Акции': '#!', 'Новости': '#!', 'Контакты': '#!'};
     
-    nav.navigation(role="navigation")
-      ul
-        each val, key in navigation
-          if active === key
-            li.active
-              a(href=val, title=key)= key
-          else
-            li
-              a(href=val, title=key)= key
+    .header__logo
+      a(href="#!")
+        img(src="./img/logo.png", alt="")
+    
+    .header__center
+      
+      .header__time
+        .header__time-str
+          | Пн - Пт, 
+          strong 9:00 - 22:00
+          i.ion-chevron-down
+        .header__time-popup
+          p text
+          
+      .header__phone
+        .header__phone-str
+          i.ion-android-call
+          | (812) 
+          strong 987-65-43
+          i.ion-chevron-down
+        .header__phone-popup
+          b Viber
+          br
+          | 8 (073) 
+          strong 987-65-43
+          br
+          b Офис
+          br
+          | 8 (050) 
+          strong 987-65-43
+          br
+          | 8 (097) 
+          strong 987-65-43
+      
+      .header__navigation
+        ul.header__navigation-ul
+          each val, key in navigation
+            if active === key
+              li.active
+                a(href=val, title=key)= key
+            else
+              li
+                a(href=val, title=key)= key
+        .header__navigation-mobile
+          button(type="button").header__navigation-button
+            | Меню
+            span
+          .header__navigation-popup

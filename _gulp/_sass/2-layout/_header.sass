@@ -1,3 +1,146 @@
 /* header */
 .header
-  background-color: $color-gray
+  height: 94px
+  background: $color-white
+  &__logo
+    float: left
+    margin-top: 18px
+    img
+      max-width: 201px
+  &__center
+    float: right
+    position: relative
+  &__phone
+    // float: right
+    // overflow: hidden
+    height: 20px
+    font-size: rem(14)
+    font-family: $font-roboto-light
+    width: 171px
+    padding: 12px 14px 0 10px
+    box-shadow: 0 0 0 rgba($color-black,.1)
+    position: absolute
+    z-index: 50
+    right: -14px
+    top: 10px
+    border-radius: 0
+    i
+      color: $color-1
+      &.ion-chevron-down
+        font-size: rem(10)
+        margin-left: 5px
+        vertical-align: 1px
+      &.ion-android-call
+        font-size: rem(14)
+        margin-right: 8px
+        vertical-align: 0
+    &-popup
+      display: none
+      font-size: rem(12)
+      strong
+        font-size: rem(14)
+      b
+        font-size: rem(9)
+        text-transform: uppercase
+        font-family: $font-roboto-light
+    &-str
+      cursor: pointer
+      height: 20px
+      line-height: 20px
+      text-align: right
+    &-popup
+      text-align: right
+    &.is-active
+      height: auto
+      background: $color-1
+      color: $color-white
+      padding-bottom: 14px
+      box-shadow: 0 3px 15px rgba($color-black,.5)
+      border-radius: 4px
+      overflow: hidden
+      i
+        color: #79cffa
+      .header__phone-popup
+        display: block
+  &__time
+    // float: right
+    // overflow: hidden
+    height: 20px
+    font-size: rem(14)
+    font-family: $font-roboto-light
+    width: 171px
+    padding: 12px 14px 0 10px
+    box-shadow: 0 0 0 rgba($color-black,.1)
+    position: absolute
+    z-index: 50
+    right: 151px
+    top: 10px
+    border-radius: 0
+    i
+      color: $color-1
+      &.ion-chevron-down
+        font-size: rem(10)
+        margin-left: 5px
+        vertical-align: 1px
+      &.ion-android-call
+        font-size: rem(14)
+        margin-right: 8px
+        vertical-align: 0
+    &-popup
+      display: none
+      font-size: rem(12)
+      strong
+        font-size: rem(14)
+      b
+        font-size: rem(9)
+        text-transform: uppercase
+        font-family: $font-roboto-light
+    &-str
+      cursor: pointer
+      height: 20px
+      line-height: 20px
+      text-align: right
+    &-popup
+      text-align: right
+    &.is-active
+      height: auto
+      background: $color-1
+      color: $color-white
+      padding-bottom: 14px
+      box-shadow: 0 3px 15px rgba($color-black,.5)
+      border-radius: 4px
+      overflow: hidden
+      i
+        color: #79cffa
+      .header__time-popup
+        display: block
+  &__navigation
+    position: absolute
+    right: 0
+    top: 55px
+    &-ul
+      margin: 0
+      padding: 0
+      white-space: nowrap
+      font-size: rem(15)
+      text-transform: uppercase
+      font-family: $font-roboto-medium
+      li
+        list-style: none
+        margin: 0
+        display: inline-block
+        &+li
+          margin-left: 20px
+        a, span
+          text-decoration: none
+          color: $color-3
+        a
+          &:hover, &:focus
+            color: $color-1
+        &.active
+          a, span
+            color: $color-1
+    &-mobile
+      display: none
+    &-popup
+      display: none

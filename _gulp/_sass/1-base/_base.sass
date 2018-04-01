@@ -29,7 +29,7 @@ body
 
 body
   background: $color-white
-  font-size: rem(16)
+  font-size: rem(14)
   font-family: $primary-font
   color: $primary-color
   -webkit-font-smoothing: antialiased
@@ -38,34 +38,40 @@ body
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   color: $primary-color
-  font-weight: bold
+  font-weight: 400
   text-decoration: none
   margin: 0 0 15px 0
+  font-family: $font-roboto-bold
 
 .h1, h1
-  font-size: rem(21)
+  font-size: rem(35)
   line-height: 1.05
   letter-spacing: -1px
   margin-bottom: 25px
+  text-transform: uppercase
+  font-family: $font-roboto
 
 .h2, h2
-  font-size: rem(18)
+  font-size: rem(30)
   line-height: 1.14
   margin-bottom: 20px
+  text-transform: uppercase
+  font-family: $font-roboto
 
 .h3, h3
-  font-size: rem(16)
+  font-size: rem(22)
   line-height: 1.38
 
+
 .h4, h4
-  font-size: rem(14)
+  font-size: rem(19)
   line-height: 1.38
 
 .h5, h5
-  font-size: rem(13)
+  font-size: rem(17)
 
 .h6, h6
-  font-size: rem(12)
+  font-size: rem(15)
 
 .small, small
   font-size: rem(12)
@@ -79,7 +85,8 @@ em, i, .em, .i
   font-style: italic
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: 400
+  font-family: $font-roboto-bold
 
 hr
   border: solid #ddd
@@ -110,6 +117,8 @@ a.link
   width: 100%
   min-width: 320px
   padding: 0 15px
+  .section
+    min-width: auto
 
 /* text align */
 .text
@@ -119,6 +128,8 @@ a.link
     text-align: left
   &-right, &--right
     text-align: right
+  &-nowrap, &--nowrap
+    white-space: nowrap !important
 
 /* loader */
 .loader
@@ -130,20 +141,20 @@ a.link
   z-index: 10000
   background-color: $color-white
   &__block
-    background: $color-black
+    background: $color-1
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: $color-black
+    color: $color-1
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
     transform: translate(-50%,-50%)
     &:before, &:after
-      background: $color-black
+      background: $color-1
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -187,13 +198,109 @@ a.link
 
 /* section */
 .section
-  padding: 50px 0
+  padding: 60px 0 65px 0
   min-width: 320px
+  &__head
+    color: #444444
+    font-family: $font-roboto
+    display: table
+    width: 100%
+    font-size: rem(25)
+    text-transform: uppercase
+    font-weight: 400
+    margin-bottom: 20px
+    &:before, &:after
+      content: ''
+      display: table-cell
+      background-image: linear-gradient(#dbdbdb, #dbdbdb)
+      background-size: 100% 1px
+      background-repeat: no-repeat
+      background-position: center
+    div
+      display: table-cell
+      white-space: nowrap
+      text-align: center
+      width: 100px
+      padding: 0 25px
+      position: relative
+      line-height: 1.1
+  &__more
+    text-align: center
+    background-image: linear-gradient(#dbdbdb, #dbdbdb)
+    background-size: 100% 1px
+    background-repeat: no-repeat
+    background-position: center
+    &>a
+      display: inline-block
+      background: $color-1
+      border-radius: 25px
+      text-decoration: none
+      color: $color-white
+      height: 30px
+      line-height: 28px
+      width: 100%
+      max-width: 195px
+      text-transform: uppercase
+      font-family: $font-roboto-bold
+      font-size: rem(11)
+      border: 1px solid $color-1
+      &:hover, &:focus
+        background: $color-white
+        color: $color-1
+
+.content
+  padding-bottom: 50px
 
 ul li
   list-style-type: disc
 ol li
   list-style-type: decimal
+
+ul.list
+  margin: 0 0 25px 0
+  padding: 0
+  font-size: rem(14)
+  // font-family: $font-roboto-medium
+  li
+    line-height: 24px
+    list-style: none
+    margin: 0
+    padding-left: 32px
+    position: relative
+    &::before
+      content: "\f363"
+      font-family: $font-ionicons
+      position: absolute
+      left: 17px
+      top: 5px
+      line-height: 1
+      color: $color-1
+      font-size: rem(14)
+
+ol.list
+  margin: 0 0 25px 0
+  padding: 0
+  font-size: rem(14)
+  li
+    line-height: 24px
+    list-style: none
+    margin: 0
+    padding-left: 32px
+    position: relative
+    .span
+      display: block
+      left: 6px
+      top: 0
+      width: 19px
+      height: 19px
+      position: absolute
+      text-align: center
+      color: $color-white
+      background: $color-1
+      border-radius: 50%
+      font-size: 12.5px
+      font-family: $font-roboto-bold
+      text-align: right
 
 /* bg */
 .bg

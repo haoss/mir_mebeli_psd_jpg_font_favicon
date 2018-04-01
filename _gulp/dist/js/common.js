@@ -3,24 +3,6 @@
 // Document ready
 $(document).on('ready', function(){
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -72,6 +54,23 @@ $(document).on('ready', function(){
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
   });
 
+  $('ol.list li').each(function(){
+    $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>');
+  });
+
+  $('.main-slider__carousel').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    draggable: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
+
+  headerLinks();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -91,8 +90,8 @@ $(window).on('load', function() {
   $(".loader").delay(400).fadeOut("slow");
 });
 
-$(window).on('scroll', function() { console.log('scroll'); });
-$(window).on('resize', function() { console.log('resize'); });
+$(window).on('scroll', function() { });
+$(window).on('resize', function() { });
 
 /*
 version 2015-09-23 14:30 GMT +2
@@ -153,5 +152,37 @@ function simpleForm(form, callback) {
     $(form).addClass('ajax-waiting');
 
     return false;
+  });
+}
+
+function headerLinks(){
+  var headerPhone = $('.header__phone'),
+      headerTime = $('.header__time');
+
+  // header
+  headerPhone.on('click', function(e){
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    headerTime.removeClass('is-active');
+  });
+  headerTime.on('click', function(e){
+    e.stopPropagation();
+    $(this).toggleClass('is-active');
+    headerPhone.removeClass('is-active');
+  });
+
+  $(document).on('click', function(){
+
+    if (headerPhone.hasClass('is-active')) {
+      setTimeout(function(){
+        headerPhone.removeClass('is-active');
+      }, 500)
+    }
+    if (headerTime.hasClass('is-active')) {
+      setTimeout(function(){
+        headerTime.removeClass('is-active');
+      }, 500)
+    }
+
   });
 }
