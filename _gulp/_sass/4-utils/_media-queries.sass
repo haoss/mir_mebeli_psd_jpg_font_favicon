@@ -44,6 +44,20 @@
       height: 205px
       &-content
         display: none
+  .header
+    &__navigation
+      padding-right: 36px
+      &-ul
+        li
+          &+li
+            margin-left: 15px
+          &:last-child
+            display: none
+          &:nth-last-child(2)
+            display: none
+      &-mobile
+        display: block
+
 
 @media only screen and (max-width : 991px) and (min-width : 767px)
   .advantages
@@ -83,6 +97,25 @@
       height: 127px
     .slick-dots
       display: none !important
+  .header
+    &__navigation
+      &-ul
+        display: none
+      &-button
+        font-size: rem(15)
+        white-space: nowrap
+        width: 75px
+        span
+          margin-left: 10px
+          vertical-align: 4px
+      &-popup
+        .header__navigation-ul
+          display: block
+          font-size: rem(18)
+          li
+            display: block
+    &__time
+      display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -101,6 +134,15 @@
   .main-slider
     &__block
       height: 82px
+  .header
+    height: 77px
+    &__logo
+      img
+        max-width: 130px
+    &__phone
+      top: 4px
+    &__navigation
+      top: 44px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

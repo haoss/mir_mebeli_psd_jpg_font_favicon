@@ -20,7 +20,7 @@
     padding: 12px 14px 0 10px
     box-shadow: 0 0 0 rgba($color-black,.1)
     position: absolute
-    z-index: 50
+    z-index: 170
     right: -14px
     top: 10px
     border-radius: 0
@@ -72,7 +72,7 @@
     padding: 12px 14px 0 10px
     box-shadow: 0 0 0 rgba($color-black,.1)
     position: absolute
-    z-index: 50
+    z-index: 170
     right: 151px
     top: 10px
     border-radius: 0
@@ -142,5 +142,84 @@
             color: $color-1
     &-mobile
       display: none
+      position: absolute
+      right: 0
+      top: 0px
+      &.is-active
+        .header__navigation
+          &-popup
+            display: block
+          &-button
+            color: $color-white
+            span
+              background: $color-white
+              &::after, &::before
+                background: $color-white
     &-popup
+      position: absolute
+      top: -10px
+      right: -15px
+      background: $color-1
+      width: 171px
+      border-radius: 4px
       display: none
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5)
+      z-index: 50
+      padding-top: 40px
+      padding-bottom: 14px
+      .header__navigation-ul
+        text-align: right
+        li
+          display: none
+          margin: 0 0 15px 0
+          &:last-child
+            display: block
+            margin-bottom: 0
+          &:nth-last-child(2)
+            display: block
+          a
+            color: $color-white
+            padding-right: 38px
+            padding-left: 10px
+            display: block
+            line-height: 1
+          &.active
+            a
+              &::after
+                content: "\f361"
+                font-family: $font-ionicons
+                color: $color-white
+                position: absolute
+                line-height: 1
+                right: 18px
+
+    &-button
+      border: 0
+      background: none
+      color: $color-1
+      font-size: rem(0)
+      text-transform: uppercase
+      padding: 0
+      vertical-align: 4px
+      position: relative
+      z-index: 60
+      font-family: $font-roboto-medium
+      height: 18px
+      line-height: 18px
+      span
+        display: inline-block
+        position: relative
+        height: 2px
+        width: 13px
+        background: $color-1
+        vertical-align: 0
+        &::before, &::after
+          position: absolute
+          content: ''
+          height: 2px
+          width: 13px
+          left: 0
+          top: -4px
+          background: $color-1
+        &::after
+          top: 4px

@@ -70,6 +70,7 @@ $(document).on('ready', function(){
   });
 
   headerLinks();
+  mobileMenu();
 
   // Chrome Smooth Scroll
   try {
@@ -158,18 +159,22 @@ function simpleForm(form, callback) {
 function headerLinks(){
   var headerPhone = $('.header__phone'),
       headerTime = $('.header__time');
+  var btn = $('.header__navigation-button');
+  var navMobile = $('.header__navigation-mobile');
 
   // header
   headerPhone.on('click', function(e){
     e.stopPropagation();
     $(this).toggleClass('is-active');
     headerTime.removeClass('is-active');
+    navMobile.removeClass('is-active');
   });
-  headerTime.on('click', function(e){
-    e.stopPropagation();
-    $(this).toggleClass('is-active');
-    headerPhone.removeClass('is-active');
-  });
+  // headerTime.on('click', function(e){
+  //   e.stopPropagation();
+  //   $(this).toggleClass('is-active');
+  //   headerPhone.removeClass('is-active');
+  //   navMobile.removeClass('is-active');
+  // });
 
   $(document).on('click', function(){
 
@@ -183,6 +188,35 @@ function headerLinks(){
         headerTime.removeClass('is-active');
       }, 500)
     }
+    if (navMobile.hasClass('is-active')) {
+      setTimeout(function(){
+        navMobile.removeClass('is-active');
+      }, 500)
+    }
 
   });
+}
+
+function mobileMenu() {
+  var headerPhone = $('.header__phone'),
+      headerTime = $('.header__time');
+  var ul = $('.header__navigation-ul');
+  var btn = $('.header__navigation-button');
+  var ulMobile = $('.header__navigation-popup');
+  var navMobile = $('.header__navigation-mobile');
+  var navPopup = $('.header__navigation-popup');
+
+  ul.clone().appendTo(ulMobile);
+
+  btn.on('click', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    navMobile.toggleClass('is-active');
+    headerPhone.removeClass('is-active');
+    headerTime.removeClass('is-active');
+  });
+
+  navPopup.on('click', function(e){
+    e.stopPropagation();
+  })
 }
