@@ -26,6 +26,12 @@
         font-size: rem(14)
       &-number
         display: none
+  .footer
+    &__navigation
+      &-ul
+        li
+          &+li
+            margin-left: 21px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -57,7 +63,19 @@
             display: none
       &-mobile
         display: block
-
+  .footer
+    &__navigation
+      padding-right: 36px
+      &-ul
+        li
+          &+li
+            margin-left: 15px
+          &:last-child
+            display: none
+          &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4)
+            display: none
+      &-mobile
+        display: block
 
 @media only screen and (max-width : 991px) and (min-width : 767px)
   .advantages
@@ -116,6 +134,22 @@
             display: block
     &__time
       display: none
+  .footer
+    height: 110px
+    &__center
+      float: none
+      width: 100%
+      overflow: hidden
+    &__social
+      float: right
+      margin-left: 0
+    &__navigation
+      display: none
+    &__copyright
+      height: 50px
+      line-height: 50px
+      margin: 0
+      text-align: center
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -143,6 +177,12 @@
       top: 4px
     &__navigation
       top: 44px
+  .footer
+    &__logo
+      display: none
+    &__social
+      float: none
+      text-align: center
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

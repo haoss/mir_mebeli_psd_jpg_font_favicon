@@ -1,3 +1,166 @@
 /* footer */
 .footer
-  background-color: $color-gray
+  height: 70px
+  // background: #eee
+  &__logo
+    margin-top: 13px
+    float: left
+    img
+      width: 142px
+      height: 42px
+  &__center
+    position: relative
+    float: right
+  &__navigation
+    position: absolute
+    right: 0
+    top: 13px
+    &-ul
+      margin: 0
+      padding: 0
+      white-space: nowrap
+      font-size: rem(12)
+      text-transform: uppercase
+      font-family: $font-roboto-bold
+      li
+        list-style: none
+        margin: 0
+        display: inline-block
+        &+li
+          margin-left: 24px
+        a, span
+          text-decoration: none
+          color: $color-3
+        a
+          &:hover, &:focus
+            color: $color-1
+        // &.active
+        //   a, span
+        //     color: $color-1
+    &-mobile
+      display: none
+      position: absolute
+      right: 0
+      top: -2px
+      &.is-active
+        .footer__navigation
+          &-popup
+            display: block
+          &-button
+            color: $color-white
+            span
+              background: $color-white
+              &::after, &::before
+                background: $color-white
+    &-popup
+      position: absolute
+      bottom: -10px
+      right: -15px
+      background: $color-1
+      width: 171px
+      border-radius: 4px
+      display: none
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.5)
+      z-index: 50
+      padding-bottom: 40px
+      padding-top: 14px
+      .footer__navigation-ul
+        text-align: right
+        li
+          display: none
+          margin: 0 0 15px 0
+          &:last-child
+            display: block
+            margin-bottom: 0
+          &:nth-last-child(2), &:nth-last-child(3), &:nth-last-child(4)
+            display: block
+          a
+            color: $color-white
+            padding-right: 38px
+            padding-left: 10px
+            display: block
+            line-height: 1
+          &.active
+            a
+              &::after
+                content: "\f361"
+                font-family: $font-ionicons
+                color: $color-white
+                position: absolute
+                line-height: 1
+                right: 18px
+
+    &-button
+      border: 0
+      background: none
+      color: $color-1
+      font-size: rem(0)
+      text-transform: uppercase
+      padding: 0
+      vertical-align: 4px
+      position: relative
+      z-index: 60
+      font-family: $font-roboto-medium
+      height: 18px
+      line-height: 18px
+      span
+        display: inline-block
+        position: relative
+        height: 2px
+        width: 13px
+        background: $color-1
+        vertical-align: 0
+        &::before, &::after
+          position: absolute
+          content: ''
+          height: 2px
+          width: 13px
+          left: 0
+          top: -4px
+          background: $color-1
+        &::after
+          top: 4px
+
+  &__social
+    float: left
+    white-space: nowrap
+    margin-left: 50px
+    margin-top: 19px
+    a
+      display: inline-block
+      &+a
+        margin-left: 21px
+      svg
+        display: block
+        width: 32px
+        height: 32px
+        path
+          transition: fill 0.35s
+          fill: #dbdbdb
+    &-vk
+      &:hover
+        svg
+          path
+            fill: #4d76a2
+    &-fb
+      &:hover
+        svg
+          path
+            fill: #3b5999
+    &-in
+      &:hover
+        svg
+          path
+            fill: #41729b
+    &-ok
+      &:hover
+        svg
+          path
+            fill: #ee8108
+  &__copyright
+    text-align: right
+    font-size: rem(12)
+    color: $color-3
+    font-family: $font-roboto-light
+    line-height: 1.1
+    margin-top: 41px

@@ -6,11 +6,30 @@ footer.footer
       img(src="./img/logo.png", alt="")
     
     .footer__social
-      a(href="#!") 1
-      a(href="#!") 2
-      a(href="#!") 3
-      a(href="#!") 4
+      a(href="#!").footer__social-vk
+        +svgSocial1
+      a(href="#!").footer__social-fb
+        +svgSocial2
+      a(href="#!").footer__social-in
+        +svgSocial3
+      a(href="#!").footer__social-ok
+        +svgSocial4
   
     .footer__center
       
+      .footer__navigation
+        ul.footer__navigation-ul
+          each val, key in navigation
+            if active === key
+              li.active
+                a(href=val, title=key)= key
+            else
+              li
+                a(href=val, title=key)= key
+        .footer__navigation-mobile
+          button(type="button").footer__navigation-button
+            | Меню
+            span
+          .footer__navigation-popup
       
+      .footer__copyright © 2018 Сделано в Студии Рiarme.ru.
