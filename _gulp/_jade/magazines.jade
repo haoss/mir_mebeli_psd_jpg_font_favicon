@@ -1,0 +1,124 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Магазины' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список магазинов' + ' - Мебель России' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    +breadcrumbs
+    
+    .content
+      .container
+        
+        h1 Магазины
+        
+        p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
+        
+        .clear
+        
+        .magazine__alphabet
+          .magazine__alphabet-title поиск по алфавиту
+          .magazine__alphabet-body
+            ul
+              li: a(href="#!") A
+              li: a(href="#!") Б
+              li: a(href="#!") В
+              li: a(href="#!") Г
+              li: a(href="#!") Д
+              li: a(href="#!") З
+              li: a(href="#!") И
+              li: a(href="#!") К
+              li: a(href="#!") Л
+              li: a(href="#!") М
+              li.active: a(href="#!") Н
+              li: a(href="#!") О
+              li: a(href="#!") П
+              li: a(href="#!") Р
+              li: a(href="#!") С
+              li: a(href="#!") Т
+              li: a(href="#!") У
+              li: a(href="#!") Ф
+              li: a(href="#!") Ш
+              li: a(href="#!") Э
+              li: a(href="#!") Я 
+              li: a(href="#!") 0-9
+            ul
+              li: a(href="#!") A
+              li: a(href="#!") B
+              li: a(href="#!") C
+              li: a(href="#!") D
+              li: a(href="#!") E
+              li: a(href="#!") F
+              li: a(href="#!") G
+              li: a(href="#!") H
+              li: a(href="#!") I
+              li: a(href="#!") K
+              li: a(href="#!") L
+              li: a(href="#!") M
+              li: a(href="#!") N
+              li: a(href="#!") O
+              li: a(href="#!") P
+              li: a(href="#!") Q
+              li: a(href="#!") R
+              li: a(href="#!") S
+              li: a(href="#!") T
+              li: a(href="#!") V
+              li: a(href="#!") X
+              li: a(href="#!") Y
+              li: a(href="#!") Z
+    
+        .magazine__letter
+          .magazine__letter-head
+            div A
+          .magazine__letter-row
+            .magazine__letter-wrapper.row
+              .col-md-6
+                .magazine__letter-col1
+                  .magazine__letter-logo
+                    a(href="#!")
+                      img(src="./img/magazine-list-logo-1.png", alt="")
+                  .magazine__letter-text
+                    .magazine__letter-title piterra
+                    p В данный магазин находитя на первом этаже, в помещении 1б2 слева за 200 шагов от входа торца задней двери...
+              .col-md-6
+                .magazine__letter-col2
+                  .magazine__letter-products
+                    .magazine__letter-name виды продукции
+                    p Кухни, Ванные, Гостинные, Спальни, Детские, Гардеродная
+                  .magazine__letter-brand
+                    .magazine__letter-name бренды
+                    p 
+                    a(href="#!") Abitare Italy, 
+                    a(href="#!") Acqua Praddy, 
+                    a(href="#!") Aerre cucine, 
+                    a(href="#!") Agostini, 
+                    a(href="#!") Agresti, 
+                    a(href="#!") Ala mobili, 
+                    a(href="#!") Alberto &amp; Mario, 
+                    a(href="#!") Ghezzani, Aleal, 
+                    a(href="#!") Alexandra Collection...
+                
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

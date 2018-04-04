@@ -58,19 +58,12 @@ $(document).on('ready', function(){
     $(this).prepend('<span class="span">' + ($(this).index() + 1) + '</span>');
   });
 
-  $('.main-slider__carousel').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    draggable: false,
-    autoplay: true,
-    autoplaySpeed: 5000
-  });
+
 
   headerLinks();
   mobileMenu();
+  mainCarousel();
+  aboutCarousel();
 
   // Chrome Smooth Scroll
   try {
@@ -238,5 +231,54 @@ function mobileMenu() {
 
   navPopup.on('click', function(e){
     e.stopPropagation();
+  })
+}
+
+function mainCarousel(){
+  $('.main-slider__carousel').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    draggable: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
+}
+
+function aboutCarousel(){
+  $('.about__carousel-wrapper').slick({
+    infinite: true,
+    centerMode: true,
+    centerPadding: '285px',
+    slidesToShow: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1199,
+        settings: {
+          centerPadding: '235px'
+        }
+      },
+      {
+        breakpoint: 991,
+        settings: {
+          centerPadding: '180px'
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          centerMode: false,
+          centerPadding: '0px',
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   })
 }

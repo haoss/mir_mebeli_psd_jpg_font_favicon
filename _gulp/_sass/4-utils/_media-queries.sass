@@ -32,6 +32,15 @@
         li
           &+li
             margin-left: 21px
+  .about
+    &__top
+      margin-bottom: 20px
+    &__bottom
+      margin-bottom: 0
+    &__carousel
+      &-block
+        img
+          max-height: 338px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -45,6 +54,10 @@
   .about
     &__content
       padding-left: 25px
+    &__carousel
+      &-block
+        img
+          max-height: 258px
   .main-slider
     &__block
       height: 205px
@@ -150,9 +163,28 @@
       line-height: 50px
       margin: 0
       text-align: center
+  .about
+    &__top
+      margin-bottom: 40px
+      &-img
+        max-width: 220px
+        margin: 0 auto
+    &__bottom
+      &>div
+        column-count: 1
+    &__carousel
+      &-block
+        img
+          max-width: 100%
+          height: auto
+          margin: 0 auto
+  .content
+    padding-bottom: 30px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
+  .h1, h1
+    font-size: rem(30)
   .section
     padding: 55px 0
     &__head
