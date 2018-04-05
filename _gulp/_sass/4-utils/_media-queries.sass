@@ -41,6 +41,10 @@
       &-block
         img
           max-height: 338px
+  .magazine
+    &__letter
+      &-products
+        width: 227px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -89,6 +93,17 @@
             display: none
       &-mobile
         display: block
+  .magazine
+    &__letter
+      &-row
+        padding-top: 12px
+        padding-bottom: 12px
+      &-logo
+        width: 110px
+        img
+          max-width: 110px
+      &-products
+        width: 173px
 
 @media only screen and (max-width : 991px) and (min-width : 767px)
   .advantages
@@ -180,6 +195,15 @@
           margin: 0 auto
   .content
     padding-bottom: 30px
+  .magazine
+    &__letter
+      &-col1
+        margin-bottom: 20px
+      &-col2
+        &>div
+          width: 50%
+      &-head
+        margin-top: 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -215,6 +239,23 @@
     &__social
       float: none
       text-align: center
+  .magazine
+    &__letter
+      &-col1, &-col2
+        flex-direction: column
+        align-items: center
+      &-text
+        padding-left: 0
+        width: 100%
+      &-logo
+        margin-bottom: 25px
+      &-col2
+        &>div
+          width: 100%
+          padding: 0
+      &-products
+        margin-bottom: 25px
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
