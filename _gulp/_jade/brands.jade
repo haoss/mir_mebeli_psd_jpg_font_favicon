@@ -1,0 +1,162 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Бренды' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список производителей' + ' - Мебель России' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    +breadcrumbs
+    
+    .content
+      .container
+        
+        h1 Список производителей
+        
+        p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
+        
+        .clear
+        
+        .brands__alphabet
+          .brands__alphabet-body
+            .brands__alphabet-block
+              .brands__alphabet-title А
+              ul
+                li: a(href="#!") Abitare Italy
+                li: a(href="#!") Acqua Praddy
+                li: a(href="#!") Aerre cucine
+                li: a(href="#!") Agostini
+                li: a(href="#!") Agresti
+                li: a(href="#!") Ala mobili
+                li: a(href="#!") Alberto &amp; Mario Ghezzani
+                li: a(href="#!") Aleal
+                li: a(href="#!") Alexandra Collection
+                li: a(href="#!") Allievi
+            .brands__alphabet-block
+              .brands__alphabet-title B
+              ul
+                li: a(href="#!") Bacci Stile
+                li: a(href="#!") Bamax
+                li: a(href="#!") Barnini Oseo
+                li: a(href="#!") Bastex
+                li: a(href="#!") Bastianelli Home
+                li: a(href="#!") Bbelle
+                li: a(href="#!") Bellutti
+                li: a(href="#!") Benetti
+                li: a(href="#!") Bernazzoli
+                li: a(href="#!") Bertele
+            .brands__alphabet-block
+              .brands__alphabet-title C
+              ul
+                li: a(href="#!") Ca' d'Oro
+                li: a(href="#!") Cantori
+                li: a(href="#!") Cappelletti
+                li: a(href="#!") Carpanese
+                li: a(href="#!") Casa Milano
+                li: a(href="#!") Casali
+                li: a(href="#!") Caspani Tino
+                li: a(href="#!") Casta Diva
+            .brands__alphabet-block
+              .brands__alphabet-title D
+              ul
+                li: a(href="#!") Daniela Lucato
+                li: a(href="#!") Danti
+                li: a(href="#!") Del Curto
+                li: a(href="#!") Dema
+                li: a(href="#!") Deri
+                li: a(href="#!") Di liddo e Perego
+                li: a(href="#!") Diva
+                
+            .brands__alphabet-block
+              .brands__alphabet-title E
+              ul
+                li: a(href="#!") Ebanisteria Bacci
+                li: a(href="#!") Ego
+                li: a(href="#!") Elledue
+                li: a(href="#!") Epocart
+                li: a(href="#!") Epoque
+                li: a(href="#!") Essepi
+                li: a(href="#!") Ethera
+                li: a(href="#!") Euro Art Lamp
+            .brands__alphabet-block
+              .brands__alphabet-title F
+              ul
+                li: a(href="#!") Falma
+                li: a(href="#!") Faoma
+                li: a(href="#!") Ferretti &amp; Ferretti
+                li: a(href="#!") Fiam
+                li: a(href="#!") Fimes
+                li: a(href="#!") Flora
+                li: a(href="#!") Florence Collections
+            .brands__alphabet-block
+              .brands__alphabet-title G
+              ul
+                li: a(href="#!") Ca' d'Oro
+                li: a(href="#!") Galimberti Nino
+                li: a(href="#!") Gallo
+                li: a(href="#!") Gallotti
+                li: a(href="#!") Gamma
+                li: a(href="#!") GC Colombo
+                li: a(href="#!") Giemegi
+                li: a(href="#!") Giorgio Casa
+            .brands__alphabet-block
+              .brands__alphabet-title H
+              ul
+                li: a(href="#!") Halley
+                li: a(href="#!") Home cucine
+    
+        .section.popular.no--p-bottom 
+          .popular__head Самые популярные
+          .popular__row
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/brands-list-img-1.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Acqua Praddy
+                  p В основу зарождения компании Praddy производителя итальянской мебели в современном стиле была положена идея создания не только бренда...
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/brands-list-img-2.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Aerre cucine
+                  p Aerre Cucine – в Arzano под Неаполем уже более 20 лет существует динамично развивающаяся компания. Основателем этой фабрики...
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/brands-list-img-3.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Agostini
+                  p В основу зарождения компании Praddy производителя итальянской мебели в современном стиле была положена идея создания не только бренда...
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/brands-list-img-4.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Aerre cucine
+                  p Фабрика Agresti (Италия) ведущий производитель функциональной мебели: эксклюзивных, роскошных, элегантных и самое главное надежных сейфов...
+            
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

@@ -45,6 +45,19 @@
     &__letter
       &-products
         width: 227px
+  .popular
+    &__block
+      &-img
+        width: 132px
+        img
+          max-width: 112px
+      &-info
+        padding-left: 30px
+  .brands
+    &__thumb
+      max-width: 213px
+      margin-left: 15px
+      margin-bottom: 15px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -104,6 +117,17 @@
           max-width: 110px
       &-products
         width: 173px
+  .popular
+    &__block
+      &-img
+        width: 95px
+        img
+          max-width: 75px
+  .brands
+    &__thumb
+      max-width: 157px
+      margin-left: 30px
+      margin-bottom: 15px
 
 @media only screen and (max-width : 991px) and (min-width : 767px)
   .advantages
@@ -204,6 +228,34 @@
           width: 50%
       &-head
         margin-top: 0
+    &__address
+      flex-direction: column
+      margin-left: -20px
+      &>div
+        margin-bottom: 10px
+        width: 100%
+  .action
+    padding-top: 20px
+  .brands
+    &__alphabet
+      &-block
+        width: 50%
+  .popular
+    &__row
+      &>div
+        width: 100%
+        &:last-child
+          .popular__block
+            margin-bottom: 0
+    &__block
+      min-height: inherit
+      margin-bottom: 10px
+  .brands
+    &__thumb
+      float: none
+      display: block
+      max-width: 157px
+      margin: 0 auto 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -255,7 +307,26 @@
           padding: 0
       &-products
         margin-bottom: 25px
-
+    &__address
+      margin-left: 0
+    &__logo
+      padding-top: 0
+      img
+        margin-left: auto
+        margin-right: auto
+  .action
+    padding-top: 20px
+  .col-xxs-12
+    width: 100% !important
+  .popular
+    &__row
+      &>div
+        padding: 0
+    &__block
+      &-img
+        display: none
+      &-info
+        padding-left: 15px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

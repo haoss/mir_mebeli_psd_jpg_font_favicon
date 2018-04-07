@@ -1,0 +1,79 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Бренды' //активный пункт меню, список в header.jade
+  -var pageTitle = '1 производитель' + ' - Мебель России' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    +breadcrumbs
+    
+    .content
+      .container
+        
+        h1 Alexandra Collection
+        
+        img(src="./img/brand-doc-logo.png", alt="").brands__thumb
+        p 
+          strong Alexandra Collection 
+          | - это испанская молодая и динамично развивающаяся семейная компания, которая разрабатывает и производит изысканную мебель ручной работы. Разрабатывается уникальная концепция интерьера с точки зрения дизайнера, а не традиционного производителя мебели, базирующаяся на очень личной философии собственников фабрики. По этой причине, предложение не ограничивается дизайном мебели, а включает в себя украшения, текстиль и освещение, все с их уникальным и неповторимым стилем. 
+        p С непревзойденной репутацией, Alexandra Collection завораживает в области высоких технологий производства мебели. Компания характеризуется переосмыслением дизайна интерьера, сочетая классические композиции с элегантным текстилем и современной креативностью. Это беспрецедентно уникальные коллекции. Alexandra Collection была создана в 1994 году благодаря концерну своего основателя и президента, Mary J. Guinot. Известный дизайнер с богатой историей и имеющий влияние в мире дизайна, цель Mary J. Guinot создавать коллекции роскошной мебели, которые удовлетворят любой вкус. 
+        p Компания, управляемая сыновьями Джеймсом и Джонни, стала одной из самых престижных в мире, известной своими эксклюзивными и ремесленными коллекциями мебели и декора. Alexandra Collection является отличным поставщиком для архитекторов, дизайнеров интерьера и международных дизайнеров, стремящихся создать гармоничное целое в оформлении интерьеров престижных домов и отелей. Уникальная эксклюзивная мебель, аксессуары, освещение, текстиль, бумага и ковры – все это направлено на максимальное развитие творческих тенденций в современном дизайне интерьеров.
+
+        .clear
+        
+        .section.popular.no--p-bottom 
+          .popular__head Магазины, в которых представлен бренд
+          .popular__row
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/offers-img-1.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title piterra
+                  p В данном магазине представлены все коллекции данного брена. Количество наименовагний товара более 1000 едениц., а целой концепции интерьера дома....
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/offers-img-3.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Сан марко
+                  p Aerre Cucine – в Arzano под Неаполем уже более 20 лет существует динамично развивающаяся компания. Основателем этой фабрики...
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/offers-img-2.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Ампир Декор
+                  p В основу зарождения компании Praddy производителя итальянской мебели в современном стиле была положена идея создания не только бренда...
+            div
+              .popular__block
+                .popular__block-img
+                  img(src="./img/offers-img-4.png", alt="")
+                .popular__block-info
+                  a(href="#!").popular__block-title Orange park
+                  p Фабрика Agresti (Италия) ведущий производитель функциональной мебели: эксклюзивных, роскошных, элегантных и самое главное надежных сейфов...
+            
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
