@@ -133,6 +133,33 @@
         background: $color-1
         padding: 15px 12px 9px 12px
         margin-top: -8px
+    &-carousel
+      .slick-slide
+        outline: none
+      .slick-dots
+        margin: 0
+        padding: 0
+        text-align: center
+        height: 45px
+        line-height: 45px
+        li
+          list-style: none
+          margin: 0
+          display: inline-block
+          vertical-align: -11px
+          &+li
+            margin-left: 10px
+          button
+            padding: 0
+            border: 0
+            font-size: 0
+            height: 13px
+            width: 13px
+            border-radius: 50%
+            background: #eeeeee
+          &.slick-active
+            button
+              background: $color-1
   &__bottom
     margin-bottom: 50px
     &>div
@@ -587,8 +614,6 @@
     font-size: rem(12)
     color: #9c9c9c
     text-align: center
-    max-width: 335px
-    margin: 0 auto
     &-img
       overflow: hidden
       margin-bottom: 27px
@@ -710,3 +735,191 @@
       display: inline-block
       &:hover, &:focus
         text-decoration: underline
+
+#map_canvas
+  position: relative
+  overflow: hidden
+  height: 0px
+  padding-bottom: 400px
+  background: $color-2
+
+.contact
+  &__top
+    margin-bottom: 53px
+  &__map
+    overflow: hidden
+    border-radius: 4px
+    position: relative
+    margin-bottom: 45px
+  &__address
+    margin-bottom: 15px
+  &__block
+    font-size: rem(14)
+    position: relative
+    padding-left: 30px
+    line-height: 26px
+    i
+      position: absolute
+      left: 8px
+      top: 0px
+      width: 13px
+      text-align: center
+      color: #d2d2d2
+      font-size: rem(12)
+    b
+      font-size: rem(20)
+      display: block
+      font-family: $font-roboto
+    a
+      text-decoration: none
+      &:hover, &:focus
+        text-decoration: underline
+  &__content
+    p
+      &:last-child
+        margin-bottom: 0
+  &__form
+    margin-top: -42px
+    &-wrapper
+      position: relative
+      padding: 35px 33px 15px 33px
+      border: 2px solid $color-1
+      border-radius: 4px
+    legend
+      position: absolute
+      border: 0
+      padding: 0
+      background: $color-white
+      padding: 0 17px
+      color: $color-1
+      font-size: rem(25)
+      text-transform: uppercase
+      font-family: $font-roboto
+      width: auto
+      left: 16px
+      top: -15px
+      line-height: 1
+    &-bottom
+      display: flex
+      &>div
+        &+div
+          padding-left: 20px
+      .btn
+        width: 165px
+        min-width: inherit
+  &__info
+    &-block
+      font-size: rem(13)
+      color: #808080
+      p
+        line-height: 18px
+    &-title
+      text-transform: uppercase
+      font-size: rem(15)
+      margin-bottom: 8px
+      font-family: $font-roboto-medium
+      color: $color-3
+
+.plan
+  &__row
+    max-width: 975px
+    margin: 0 auto 65px
+    position: relative
+    &:last-child
+      margin-bottom: 0
+    +clearfix
+    &-img
+      float: right
+      text-align: center
+      width: 645px
+    &-span
+      color: $color-3
+      font-size: rem(14)
+      font-family: $font-roboto-medium
+      margin-top: 10px
+    &-about
+      padding: 40px 30px 20px 50px
+      width: 100%
+      position: absolute
+      background: $color-1
+      color: $color-white
+      max-width: 440px
+      border-radius: 4px 4px 0 4px
+      min-height: 268px
+      top: 95px
+      left: 0
+      z-index: 10
+      &::after
+        position: absolute
+        right: -30px
+        bottom: 0
+        content: ''
+        width: 0
+        height: 0
+        border-left: 30px solid transparent
+        border-right: 30px solid transparent
+        border-bottom: 35px solid $color-1
+      ul
+        margin: 0
+        padding: 0
+        li
+          // height: 9px
+          list-style: none
+          margin: 0 0 12px 0
+          position: relative
+          // white-space: nowrap
+          border-bottom: 1px dashed #5fd2f8
+          &::before
+            color: #5fd2f8
+            font-size: rem(12)
+            line-height: 1
+            position: absolute
+            left: -15px
+            top: 5px
+            content: "\f3d1"
+            font-family: $font-ionicons
+          +clearfix
+          &:last-child
+            margin-bottom: 0
+          span
+            float: left
+            display: block
+            line-height: 1.2
+            // height: 22px
+            font-size: rem(16)
+            font-family: $font-roboto-light
+            margin-bottom: -4px
+            background: $color-1
+          strong
+            position: absolute
+            right: 0
+            bottom: -8px
+            white-space: pre-wrap
+            width: 100px
+            text-align: left
+            height: 22px
+            background: $color-1
+            font-size: rem(16)
+            font-family: $font-roboto-medium
+            line-height: 1
+    &-title
+      text-transform: uppercase
+      font-family: $font-roboto-light
+      font-size: rem(30)
+      line-height: 1
+      margin-bottom: 33px
+      white-space: nowrap
+    &--left
+      max-width: 1140px
+      .plan__row
+        &-img
+          float: left
+          width: 575px
+        &-about
+          left: inherit
+          right: 52px
+          top: 172px
+          border-radius: 4px 4px 4px 0
+          &::after
+            left: -30px
+            right: inherit

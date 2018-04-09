@@ -2,13 +2,13 @@
 
 input
   &::-webkit-input-placeholder
-    color: $color-gray
+    color: #8c8c8c
   &::-moz-placeholder
-    color: $color-gray
+    color: #8c8c8c
   &:-ms-input-placeholder
-    color: $color-gray
+    color: #8c8c8c
   &:-moz-placeholder
-    color: $color-gray
+    color: #8c8c8c
 
 button, input, optgroup, select, textarea
   margin: 0
@@ -26,25 +26,90 @@ button, html input[type=button], input[type=reset], input[type=submit]
 .form
   &-group,  &__group
     margin-bottom: 15px
+    &.has-feedback
+      position: relative
+      .ion-alert-circled
+        position: absolute
+        display: none
+        right: 13px
+        top: 8px
+        font-size: rem(14)
+        color: $color-red
+    &.has-error
+      .ion-alert-circled
+        display: block
+        color: $color-red
+      .form
+        &-control, &__control
+          border-color: $color-red
+          color: $color-red
+          padding-right: 40px
+
+          &::-webkit-input-placeholder
+            color: $color-red
+          &::-moz-placeholder
+            color: $color-red
+          &:-ms-input-placeholder
+            color: $color-red
+          &:-moz-placeholder
+            color: $color-red
 
   &-control, &__control
     display: block
     width: 100%
-    height: 34px
-    padding: 6px 12px
+    height: 35px
+    padding: 6px 13px
     font-size: rem(14)
     line-height: 1.42857143
-    color: #555
-    background-color: $color-white
+    color: $color-3
+    background-color: $color-2
     background-image: none
-    border: 1px solid $color-gray
+    border: 1px solid $color-2
     border-radius: 4px
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
-    transition: border all .35s, box-shadow all .35s
+    box-shadow: none
+    transition: all .35s
+    font-family: $font-roboto
+    &:focus
+      border-color: $color-1
+
+  &__checkbox
+    position: relative
+    padding-left: 22px
+    font-family: $font-roboto-light
+    font-weight: 400
+    cursor: pointer
+    input
+      display: none
+      &:checked
+        &~.ion-android-checkbox-outline-blank
+          display: none
+        &~.ion-android-checkbox
+          display: block
+    [class*='ion-android']
+      position: absolute
+      font-size: rem(20)
+      left: 0
+      top: 0
+      color: $color-1
+      line-height: 1
+      top: -1px
+    .ion-android-checkbox
+      display: none
+    .span
+      display: block
+      line-height: 15px
+      font-size: rem(11)
+      color: #8c8c8c
+      margin-top: 2px
+      a
+        text-decoration: none
+        &:hover, &:focus
+          text-decoration: underline
+
 
 textarea
   &.form-control, &.form__control
-    height: 150px
+    height: 68px
     resize: none
 
 label

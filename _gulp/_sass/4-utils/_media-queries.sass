@@ -58,6 +58,13 @@
       max-width: 213px
       margin-left: 15px
       margin-bottom: 15px
+  .plan
+    &__row
+      &-img
+        width: 565px
+      &--left
+        .plan__row-about
+          right: 0
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -128,6 +135,32 @@
       max-width: 157px
       margin-left: 30px
       margin-bottom: 15px
+  .contact
+    &__form
+      margin-top: 0
+    &__content
+      margin-bottom: 35px
+    &__top
+      margin-bottom: 40px
+  .plan
+    &__row
+      &-about
+        top: 75px
+      &-img
+        width: 545px
+      &--left
+        .plan__row
+          &-img
+            float: right
+            width: 545px
+          &-about
+            left: 0
+            right: inherit
+            border-radius: 4px 4px 0 4px
+            top: 75px
+            &::after
+              left: auto
+              right: -30px
 
 @media only screen and (max-width : 991px) and (min-width : 767px)
   .advantages
@@ -236,6 +269,9 @@
         width: 100%
   .action
     padding-top: 20px
+    &__block
+      max-width: 345px
+      margin: 0 auto
   .brands
     &__alphabet
       &-block
@@ -256,6 +292,27 @@
       display: block
       max-width: 157px
       margin: 0 auto 20px
+  .plan
+    &__row
+      &-img
+        float: none !important
+        width: 100% !important
+        max-width: 450px !important
+        margin: 0 auto !important
+        img
+          max-width: 100%
+          height: auto
+      &-about
+        position: relative !important
+        top: auto !important
+        left: auto !important
+        width: 100% !important
+        max-width: 450px !important
+        margin: 0 auto !important
+        border-radius: 4px !important
+        margin-top: 12px !important
+        &::after
+          display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
@@ -327,6 +384,36 @@
         display: none
       &-info
         padding-left: 15px
+  .contact
+    &__form
+      legend
+        position: inherit
+        left: inherit
+        top: inherit
+        padding: 0
+        font-size: rem(22)
+      &-wrapper
+        padding: 20px
+      &-bottom
+        flex-direction: column
+        &>div
+          &+div
+            padding-left: 0
+            padding-top: 15px
+      .btn
+        width: 100%
+  .plan
+    &__row
+      margin-left: -15px
+      margin-right: -15px
+      &-img
+        padding: 0 15px
+      &-about
+        padding: 24px 20px 20px 33px
+        ul
+          li
+            span
+              max-width: 140px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

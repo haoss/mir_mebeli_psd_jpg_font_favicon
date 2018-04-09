@@ -64,6 +64,7 @@ $(document).on('ready', function(){
   mobileMenu();
   mainCarousel();
   aboutCarousel();
+  aboutCarouselTop();
 
   // Chrome Smooth Scroll
   try {
@@ -281,4 +282,17 @@ function aboutCarousel(){
       }
     ]
   })
+}
+
+function aboutCarouselTop(){
+  $('.about__top-carousel').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    draggable: false,
+    autoplay: true,
+    autoplaySpeed: 5000
+  });
 }

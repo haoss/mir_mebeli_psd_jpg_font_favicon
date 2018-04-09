@@ -1,0 +1,145 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Мебель России' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    +breadcrumbs
+    
+    .content
+      .container
+        
+        h1 Контакты
+        
+        .contact
+          .contact__top
+            .row
+              .col-md-6
+                .contact__address
+                  .contact__block
+                    i.ion-ios-location
+                    b ТВК «Мебель России»
+                    | г. Москва, Одинцовский район, р.п. Новоивановское
+                  .contact__block
+                    i.ion-android-call
+                    | (812) 987-65-43
+                  .contact__block
+                    i.ion-android-call
+                    | (812) 345-67-89
+                  .contact__block
+                    i.ion-android-mail
+                    a(href="#!") info@site-name.ru
+                
+                .contact__content
+                  p Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. 
+                
+              .col-md-6
+                .contact__form
+                  .contact__form-wrapper
+                    form(action="#!").form
+                      fieldset
+                        legend Остались вопросы?
+                        
+                        .form__group.has-feedback
+                          label.hidden Ваше имя
+                          input(type="text" placeholder="Ваше имя").form__control
+                          i.ion-alert-circled
+                        .form__group.has-feedback.has-error
+                          label.hidden Ваш email
+                          input(type="text" placeholder="Ваш email").form__control
+                          i.ion-alert-circled
+                        .form__group
+                          label.hidden Сообщение
+                          textarea(placeholder="Сообщение").form__control
+                        
+                        .contact__form-bottom
+                          div
+                            label.form__checkbox
+                              input(type="checkbox" checked)
+                              i.ion-android-checkbox-outline-blank
+                              i.ion-android-checkbox
+                              span.span Нажав кнопку “Отправить”, вы подтверждаете, что соглашаетесь с 
+                                a(href="#!") пользовательским соглашением
+                                | &nbsp;и принимаете его условия.
+                          div
+                            button(type="button").btn отправить
+            
+          .contact__map
+            #map_canvas
+            
+            // Google Map
+            script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+            script.
+              function initialize() {
+              var myLatlng = new google.maps.LatLng(55.6914793,37.332178);
+              var map_options = {
+                zoom: 13,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: myLatlng,
+                scrollwheel: false,
+                disableDefaultUI: true
+              }
+              var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+              var myIcon = new google.maps.MarkerImage('./img/map_icon.png', null, null, null, new google.maps.Size(227,104));
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                icon: myIcon
+              });
+              /* Remove if you dont want B/W Google Map */
+              /*
+              var styles = [
+              {
+              featureType: "all",
+              stylers: [
+              { saturation: -100 }
+              ]
+              }
+              ];
+              map.setOptions({styles: styles});
+              */
+              }
+              google.maps.event.addDomListener(window, 'load', initialize);
+            // Google Map Ends!
+
+          .contact__info
+          .row
+            .col-md-6
+              .contact__info-block
+                .contact__info-title Как проехать на машине из москвы
+                p Из г. Москвы по Минскому шоссе, от МКАД 3 км, без пробок не более 5 мин. От разворота не более 1 км и поворот на право на улицу Агрохимиков.
+              .contact__info-block
+                .contact__info-title Как проехать на машине из одинцово
+                p Из г. Одинцова – по Можайскому шоссе до пересечения с Минским шоссе, от пересечения 1,8 км. и поворот на право на ул. Агрохимиков.
+            .col-md-6
+              .contact__info-block
+                .contact__info-title Как проехать общественным транспортом из москвы
+                p Маршрутные автобусы 333, 444б 555. Трамваи 11, 22, 33. Из г. Москвы по Минскому шоссе, от МКАД 3 км, без пробок не более 5 мин. От разворота не более 1 км и поворот на право на улицу Агрохимиков. Остановка ТВК “Мебель России”
+              .contact__info-block
+                .contact__info-title Как проехать общественным транспортом из одинцово
+                p Маршрутные автобусы 333, 444б 555. Трамваи 11, 22, 33. Из г. Одинцова – по Можайскому шоссе до пересечения с Минским шоссе, от пересечения 1,8 км. и поворот на право на ул. Агрохимиков. Остановка ТВК “Мебель России”
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

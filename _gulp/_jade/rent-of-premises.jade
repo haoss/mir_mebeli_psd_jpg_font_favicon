@@ -1,0 +1,189 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Аренда' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Аренда' + ' - Мебель России' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    +breadcrumbs
+    
+    .content
+      .container
+        
+        h1 Аренда
+        
+        .about__top.row
+          .col-sm-8
+            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. 
+            p Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+            p Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». 
+          .col-sm-4
+            .about__top-img
+              .about__top-carousel
+                div
+                  .about__top-block
+                    img(src="./img/about-carousel-img.png", alt="")
+                div
+                  .about__top-block
+                    img(src="./img/about-carousel-img.png", alt="")
+                div
+                  .about__top-block
+                    img(src="./img/about-carousel-img.png", alt="")
+                div
+                  .about__top-block
+                    img(src="./img/about-carousel-img.png", alt="")
+                div
+                  .about__top-block
+                    img(src="./img/about-carousel-img.png", alt="")
+    
+        .section.advantages.advantages--about.no--m-bottom
+          .advantages__row.row
+            .col-sm-4
+              .advantages__block
+                .advantages__block-img
+                  +iconAdvantages1
+                .advantages__block-content
+                  strong 3 этажа выставочных залов 
+                  span для Вашего удобства и наглядности всего ассортимента
+            .col-sm-4
+              .advantages__block
+                .advantages__block-img
+                  +iconAdvantages2
+                .advantages__block-content
+                  strong Общая площадь более 5 000 м2
+                  span и на данной территории представлены более 100 марок производителей
+            .col-sm-4
+              .advantages__block
+                .advantages__block-img
+                  +iconAdvantages3
+                .advantages__block-content
+                  strong Дебаркадер и большая автостоянка
+                  span которая позволит быстро загрузить и разгрузить всю продукцию
+        
+        .section.plan
+          .plan__row
+            .plan__row-img
+              img(src="./img/plan-img-1.png", alt="")
+              .plan__row-span Торгово-выставочный комплекс «МЕБЕЛЬ РОССИИ»
+            .plan__row-about
+              .plan__row-title план 1-го этажа
+              ul
+                li
+                  span Торговый зал
+                  strong 1858,4 м. кв.
+                li
+                  span Лифт
+                  strong 5,7 м.кв.
+                li
+                  span Санузлы
+                  strong 5,8 м.кв.
+                li
+                  span Вспомогательные помещения
+                  strong 246,4 м. кв.
+                li
+                  span Высота этажа
+                  strong 4,18 м.
+          .plan__row.plan__row--left
+            .plan__row-img
+              img(src="./img/plan-img-1.png", alt="")
+              .plan__row-span Торгово-выставочный комплекс «МЕБЕЛЬ РОССИИ»
+            .plan__row-about
+              .plan__row-title план 2-го этажа
+              ul
+                li
+                  span Торговый зал
+                  strong 1858,4 м. кв.
+                li
+                  span Лифт
+                  strong 5,7 м.кв.
+                li
+                  span Санузлы
+                  strong 5,8 м.кв.
+                li
+                  span Вспомогательные помещения
+                  strong 246,4 м. кв.
+                li
+                  span Высота этажа
+                  strong 4,18 м.
+          .plan__row
+            .plan__row-img
+              img(src="./img/plan-img-1.png", alt="")
+              .plan__row-span Торгово-выставочный комплекс «МЕБЕЛЬ РОССИИ»
+            .plan__row-about
+              .plan__row-title план 3-го этажа
+              ul
+                li
+                  span Торговый зал
+                  strong 1858,4 м. кв.
+                li
+                  span Лифт
+                  strong 5,7 м.кв.
+                li
+                  span Санузлы
+                  strong 5,8 м.кв.
+                li
+                  span Вспомогательные помещения
+                  strong 246,4 м. кв.
+                li
+                  span Высота этажа
+                  strong 4,18 м.
+            
+        
+        .contact__form.no--m-top
+          .contact__form-wrapper
+            form(action="#!").form
+              fieldset
+                legend Остались вопросы?
+                
+                .row
+                  .col-md-6
+                    p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами.
+                    p Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. 
+                  .col-md-6
+                    .form__group.has-feedback
+                      label.hidden Ваше имя
+                      input(type="text" placeholder="Ваше имя").form__control
+                      i.ion-alert-circled
+                    .form__group.has-feedback
+                      label.hidden Ваш email
+                      input(type="text" placeholder="Ваш email").form__control
+                      i.ion-alert-circled
+                    .form__group
+                      label.hidden Сообщение
+                      textarea(placeholder="Сообщение").form__control
+                    
+                    .contact__form-bottom 
+                      div
+                        label.form__checkbox
+                          input(type="checkbox" checked)
+                          i.ion-android-checkbox-outline-blank
+                          i.ion-android-checkbox
+                          span.span Нажав кнопку “Отправить”, вы подтверждаете, что соглашаетесь с 
+                            a(href="#!") пользовательским соглашением
+                            | &nbsp;и принимаете его условия.
+                      div
+                        button(type="button").btn отправить
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
